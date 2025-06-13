@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website dengan Video dan Animasi Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            position: relative;
+            flex-wrap: wrap;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        iframe {
+            width: 45%;
+            height: 60vh;
+            border: none;
+            z-index: 1;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 3s infinite;
+            z-index: 0;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .emoji1 { top: 5%; left: 10%; }
+        .emoji2 { top: 5%; right: 10%; }
+        .emoji3 { bottom: 5%; left: 10%; }
+        .emoji4 { bottom: 5%; right: 10%; }
+        .emoji5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            iframe {
+                width: 90%;
+                height: 40vh;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Kiri -->
+    <iframe src="https://drive.google.com/file/d/10tqHjFVZiHjKKwEb_fF6y378pUryUk8K/preview" allow="autoplay"></iframe>
+
+    <!-- Video Kanan -->
+    <iframe src="https://drive.google.com/file/d/117FWyfyiFaLJ0w2dfxruL088ZB4vjopU/preview" allow="autoplay"></iframe>
+
+    <!-- Emoji -->
+    <div class="emoji emoji1">💕</div>
+    <div class="emoji emoji2">💞</div>
+    <div class="emoji emoji3">💗</div>
+    <div class="emoji emoji4">💖</div>
+    <div class="emoji emoji5">💝</div>
+
+</body>
+</html>
